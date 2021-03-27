@@ -1,3 +1,5 @@
+package P6_HandleScrollbar;
+
 import P0_SrcLocation.P0_srcLocation;
 import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import org.openqa.selenium.By;
@@ -21,7 +23,7 @@ public class P6_HandleScrollbar {
     public void afterExplorer(){}
     @Test
     public void handleScrollbar(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P6_HandleScrollbar/frame_scroll.htm.html");
+        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P6_HandleScrollbar.P6_HandleScrollbar/frame_scroll.htm.html");
 //        element对象的“顶端”对齐
         WebElement ele = driver.findElement(By.cssSelector("tbody tr:first-of-type"));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollToView(true)",ele);
