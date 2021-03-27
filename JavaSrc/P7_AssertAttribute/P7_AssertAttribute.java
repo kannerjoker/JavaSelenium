@@ -16,6 +16,7 @@ public class P7_AssertAttribute {
         }catch(Error e){
             e.printStackTrace();
         }
+        System.out.println();
     }
 
 }
