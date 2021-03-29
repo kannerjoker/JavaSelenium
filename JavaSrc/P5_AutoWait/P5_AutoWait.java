@@ -29,13 +29,15 @@ public class P5_AutoWait {
     @Test
     public void w1_implicitlyWait(){
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P5_AutoWait/P5_AutoWait.html");
+        p0.setFileName("P5_AutoWait","P5_AutoWait.html");
+        driver.get(p0.getFileName());
         driver.findElement(By.cssSelector("input[value*=\"click\"]")).click();
         ((JavascriptExecutor)driver).executeScript("arguments[0].style.border=\"10px solid blue\"",driver.findElement(By.id("abc")));
     }
     @Test
     public void w2_exceptedCondtions(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P5_AutoWait/P5_AutoWait.html");
+        p0.setFileName("P5_AutoWait","P5_AutoWait.html");
+        driver.get(p0.getFileName());
         driver.findElement(By.cssSelector("input[value*=\"click\"]")).click();
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.className("d1")));

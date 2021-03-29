@@ -32,7 +32,9 @@ public class P1_FindElement_06_By_partialLinkText {
     }
     @Test
     public void findElement_06_By_partialLinkText(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_05_By_linkText.html");
+        p0.setFileName("P1_LocateElement","P1_FindElement_06_By_partialLinkText.html");
+
+        driver.get(p0.getFileName());
         WebElement partialLinkTextElement = driver.findElement(By.partialLinkText("录"));
         partialLinkTextElement.click();
     }

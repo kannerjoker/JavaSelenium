@@ -32,7 +32,9 @@ public class P1_FindElement_01_By_id {
 
     @Test
     public void findElement_By_id(){
-        driver.get("file://home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_01_By_id.html");
+        p0.setFileName("P1_LocateElement","P1_FindElement_01_By_id.html");
+
+        driver.get(p0.getFileName());
         WebElement searchBox = driver.findElement(By.id("kw"));
         searchBox.sendKeys("hello World!");
     }

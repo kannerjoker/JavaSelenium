@@ -21,7 +21,8 @@ public class P6_HandleScrollbar {
 
     @Test
     public void handleScrollbar_Left() throws InterruptedException {
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P6_HandleScrollbar/frame_scroll.htm.html");
+        p0.setFileName("P6_HandleScrollbar","frame_scroll.htm.html");
+        driver.get(p0.getFileName());
         driver.manage().window().setSize(new Rectangle(0,0,500,500).getDimension());
 
         driver.switchTo().frame(driver.findElement(By.id("leftFrame")));
@@ -60,7 +61,8 @@ public class P6_HandleScrollbar {
 
     @Test
     public void handleScrollbar_Right(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P6_HandleScrollbar/frame_scroll.htm.html");
+        p0.setFileName("P6_HandleScrollbar","frame_scroll.htm.html");
+        driver.get(p0.getFileName());
 //        driver.manage().window().maximize();
 //        元素element对象的“顶端”与当前窗口的“顶部”对齐
         driver.switchTo().frame(driver.findElement(By.id("rightFrame")));

@@ -43,7 +43,8 @@ public class P1_FindElement_03_By_tagName {
 
     @Test
     public void findElement_03_By_tagName_2(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_03_By_tagName.html");
+        p0.setFileName("P1_LocateElement","P1_FindElement_03_By_tagName.html");
+        driver.get(p0.getFileName());
         List<WebElement> inputElements = driver.findElements(By.tagName("input"));
         for (WebElement inputEle : inputElements) {
             if(inputEle.getAttribute("type").equals("text")){

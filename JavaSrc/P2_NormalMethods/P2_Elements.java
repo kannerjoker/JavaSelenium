@@ -15,13 +15,13 @@ import java.util.concurrent.TimeUnit;
 
 public class P2_Elements {
     P0_srcLocation p0 = new P0_srcLocation();
-
     WebDriver driver;
     @BeforeTest
     public void preExplorer(){
         System.setProperty(p0.getDriverName(),p0.getDriverSrc());
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+
     }
     @AfterTest
     public void afterExplorer(){
@@ -34,14 +34,16 @@ public class P2_Elements {
     }
     @Test
     public void P2_Elemnts_01_Link(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P2_NormalMethods/P2_Elements.html");
+        p0.setFileName("P2_NormalMethods","P2_Elements.html");
+        driver.get(p0.getFileName());
         WebElement link = driver.findElement(By.xpath("//a[text()=\"小坦克\"]"));
         //点击链接
         link.click();
     }
     @Test
     public void P2_Elemnts_02_Textbox(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P2_NormalMethods/P2_Elements.html");
+        p0.setFileName("P2_NormalMethods","P2_Elements.html");
+        driver.get(p0.getFileName());
         WebElement textbox = driver.findElement(By.id("usernameid"));
 
         //清除
@@ -51,7 +53,8 @@ public class P2_Elements {
     }
     @Test
     public void P2_Elemnts_03_Button(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P2_NormalMethods/P2_Elements.html");
+        p0.setFileName("P2_NormalMethods","P2_Elements.html");
+        driver.get(p0.getFileName());
         WebElement button = driver.findElement(By.cssSelector("input[value*=\"添加\"]"));
         //点击
         button.click();
@@ -61,7 +64,8 @@ public class P2_Elements {
     }
     @Test
     public void P2_Elemnts_04_Select(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P2_NormalMethods/P2_Elements.html");
+        p0.setFileName("P2_NormalMethods","P2_Elements.html");
+        driver.get(p0.getFileName());
         WebElement seElement = driver.findElement(By.xpath("//select"));
         Select se = new Select(seElement);
 //        通过索引定位选项
@@ -84,7 +88,8 @@ public class P2_Elements {
     }
     @Test
     public void P2_Elemnts_05_RadioButton(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P2_NormalMethods/P2_Elements.html");
+        p0.setFileName("P2_NormalMethods","P2_Elements.html");
+        driver.get(p0.getFileName());
         WebElement radioButton_1 = driver.findElement(By.cssSelector("div input:nth-of-type(1)"));
         WebElement radioButton_2 = driver.findElement(By.cssSelector("div input:nth-of-type(2)"));
         WebElement radioButton_3 = driver.findElement(By.cssSelector("div input:nth-of-type(3)"));
@@ -99,7 +104,8 @@ public class P2_Elements {
     }
     @Test
     public void P2_Elemnts_06_CheckBox(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P2_NormalMethods/P2_Elements.html");
+        p0.setFileName("P2_NormalMethods","P2_Elements.html");
+        driver.get(p0.getFileName());
         WebElement checkbox_1 = driver.findElement(By.cssSelector("div+div input:nth-of-type(1)"));
         WebElement checkbox_2 = driver.findElement(By.cssSelector("div+div input:nth-of-type(2)"));
         WebElement checkbox_3 = driver.findElement(By.cssSelector("div+div input:nth-of-type(3)"));

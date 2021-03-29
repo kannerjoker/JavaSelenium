@@ -34,7 +34,8 @@ public class P4_01_HandelAlert {
     }
     @Test
     public void handleAlert(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P4_HandleAlert/P4_01_HandleAlert.html");
+        p0.setFileName("P4_HandleAlert","P4_01_HandleAlert.html");
+        driver.get(p0.getFileName());
         WebElement alertButton = driver.findElement(By.xpath("//body/p[1]/input"));
         alertButton.click();
 
@@ -49,7 +50,8 @@ public class P4_01_HandelAlert {
     }
     @Test
     public void handleConfirm(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P4_HandleAlert/P4_01_HandleAlert.html");
+        p0.setFileName("P4_HandleAlert","P4_01_HandleAlert.html");
+        driver.get(p0.getFileName());
         WebElement confirmButton = driver.findElement(By.cssSelector("body p:nth-of-type(2) input"));
         confirmButton.click();
         try {
@@ -62,7 +64,8 @@ public class P4_01_HandelAlert {
     }
     @Test
     public void handlePrompt(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P4_HandleAlert/P4_01_HandleAlert.html");
+        p0.setFileName("P4_HandleAlert","P4_01_HandleAlert.html");
+        driver.get(p0.getFileName());
         WebElement promptButton = driver.findElement(By.cssSelector("body p:last-of-type input"));
 
         Actions act = new Actions(driver);

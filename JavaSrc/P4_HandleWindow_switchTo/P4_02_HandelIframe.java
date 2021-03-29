@@ -38,7 +38,8 @@ public class P4_02_HandelIframe {
     }
     @Test
     public void handleIframe(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P4_HandleAlert/P4_02_HandelIframe.html");
+        p0.setFileName("P4_HandleAlert","P4_02_HandleWindow.html");
+        driver.get(p0.getFileName());
         WebElement searchBox_DefaultPage = driver.findElement(By.cssSelector("body div+input:first-of-type"));
         searchBox_DefaultPage.sendKeys("hello");
 //        定位iframe元素

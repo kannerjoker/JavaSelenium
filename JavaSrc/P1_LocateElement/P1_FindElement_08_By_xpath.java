@@ -32,7 +32,8 @@ public class P1_FindElement_08_By_xpath {
     }
     @Test
     public void findElement_08_By_xpath(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_08_By_xpath.html");
+        p0.setFileName("P1_LocateElement","P1_FindElement_08_By_xpath.html");
+        driver.get(p0.getFileName());
 //    1、绝对路径
         WebElement xpath_Element_01 = driver.findElement(By.xpath("/html/body/div"));
 //    2、相对路径

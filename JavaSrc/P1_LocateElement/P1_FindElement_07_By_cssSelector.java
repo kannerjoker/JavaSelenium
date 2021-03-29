@@ -34,7 +34,8 @@ public class P1_FindElement_07_By_cssSelector {
 
     @Test
     public void findElement_07_By_cssSelector(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_07_By_cssSelector.html");
+        p0.setFileName("P1_LocateElement","P1_FindElement_08_By_xpath.html");
+        driver.get(p0.getFileName());
 //        1、使用id选择器                         "#id"值
         WebElement cssSelector_01 = driver.findElement(By.cssSelector("#recordlist"));
 //        2、使用属性选择器                        ".属性值"

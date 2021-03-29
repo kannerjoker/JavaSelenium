@@ -32,6 +32,7 @@ public class P1_FindElement_05_By_linkText {
     }
     @Test
     public void findElement_05_By_linkText(){
+        p0.setFileName("P1_LocateElement","P1_FindElement_05_By_linkText.html");
         driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_05_By_linkText.html");
         WebElement linkTextElement = driver.findElement(By.linkText("登录"));
         linkTextElement.click();

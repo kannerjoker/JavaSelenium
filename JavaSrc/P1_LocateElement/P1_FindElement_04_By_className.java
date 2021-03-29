@@ -31,7 +31,9 @@ public class P1_FindElement_04_By_className {
     }
     @Test
     public void findElement_04_By_className(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_04_By_className.html");
+        p0.setFileName("P1_LocateElement","P1_FindElement_04_By_className.html");
+
+        driver.get(p0.getFileName());
         WebElement searchBox = driver.findElement(By.className("search-combobox-input"));
         searchBox.sendKeys("books");
         searchBox.submit();

@@ -32,7 +32,8 @@ public class P1_FindElement_02_By_name {
     }
     @Test
     public void findElement_02_By_name(){
-        driver.get("file:///home/kan/IdeaProjects/JavaWeb/SeleniumHtml/P1_LocateElement/P1_FindElement_02_By_name.html");
+        p0.setFileName("P1_LocateElement","P1_FindElement_02_By_name.html");
+        driver.get(p0.getFileName());
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("movies");
     }
